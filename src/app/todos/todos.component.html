@@ -1,0 +1,32 @@
+
+<div class="total-div">
+        <h1 [ngStyle]="{color:'white', textAlign:'center'}">Lista de Tarefas</h1>
+         <form>
+           <input type="text" [ngStyle]="{fontSize:'20px', borderRadius:'5px'}" [(ngModel)]="taskToAdd"  name="item" placeholder=" Insira nova Tarefa">
+            <button mat-mini-fab [ngStyle]="{fontSize:'30px', color:'white', marginLeft:'10px'}" id="checkAll" (click)="addToList()">+</button>
+         </form>
+            <hr>
+               <ul  [ngStyle]= "{marginLeft:'130px'}">
+               <li  *ngFor="let item of todoList; let i = index">
+               <div>
+               <label>
+               <input type="checkbox" value="" (click)="doItem(i)" />{{item}}</label>
+            <button  [ngStyle]="{marginLeft:'8px'}" value="" (click)="excluiTarefa(i)" ><mat-icon>delete</mat-icon></button>
+          </div>
+            </li>
+              </ul >
+                 <h2>Tarefas Concluídas</h2>
+                    <ul  [ngStyle]= "{marginLeft:'130px'}" id="check2">
+                      <li *ngFor="let item of tarefasRealizadas">
+           <div >
+               <label>
+                 <span style="text-decoration:line-through;">
+                 {{item}}
+          </span>
+          </label>
+          </div>
+          </li>
+        </ul>
+         <button [ngStyle]="{ width:'200px', marginBottom:'10px'}" mat-raised-button value="" (click)="excluirTodasTarefas()" >Excluir Todas Tarefas</button> 
+     
+ 

@@ -1,0 +1,25 @@
+    
+    li {
+      
+      text-align: center;
+      display: flex;
+    }
+
+    
+    .total-div{
+      margin-left: 450px;
+      margin-top: 100px;
+      width: 100vh;
+      right: 100vh;
+      text-align: center;
+      justify-content: center;
+      border-radius: 7px;
+      border: 1px  rgb(141, 176, 221);;
+      background-color: rgb(141, 176, 221);
+      color: aliceblue;
+     
+      }
+  
+      #check2{
+        list-style: decimal;
+      }
